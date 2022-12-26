@@ -1,0 +1,61 @@
+name:                blaze-latex-logging-example
+version:             0.1.0.0
+github:              "githubuser/blaze-latex-logging-example"
+license:             BSD3
+author:              "Ahn, Ki Yung"
+maintainer:          "kyagrd@gmail.com"
+copyright:           "2022 Ki Yung Ahn"
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/blaze-latex-logging-example#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- blaze-html
+- blaze-markup
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  blaze-latex-logging-example-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - blaze-latex-logging-example
+
+tests:
+  blaze-latex-logging-example-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - blaze-latex-logging-example
