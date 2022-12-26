@@ -59,12 +59,12 @@ main = do
         println "<html>"
         printHtml katexStarterHead
         println "<body>"
-        printHtml $ H.span "\\[\\frac{x}{y}\\]"
+        printHtml $ H.p $ toMarkup( __LOC__ <> "\\( \\displaystyle ~ \\frac{x}{y} \\)" )
         s1 <- getline
         printHtml $ H.p ! A.id "s1" $ toMarkup("1st hello world, " <> s1 <> "?")
         s2 <- getline
         printHtml $ H.p ! A.id "s1" $ toMarkup("2nd hello world, " <> s2 <> "?")
-        printHtml $ H.span "\\[\\frac{y}{z}\\]"
+        printHtml $ H.p $ toMarkup( __LOC__ <> "\\( \\displaystyle ~ \\frac{y}{z} \\)" )
         println "</body>"
         println "</html>"
 
