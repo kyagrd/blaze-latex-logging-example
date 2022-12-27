@@ -2,3 +2,5 @@
 Simple code example to demonstrate logging with LaTeX output
 
 ![screen-record](https://github.com/kyagrd/blaze-latex-logging-example/blob/main/screen-record.gif?raw=true)
+
+See `app/Main.hs` for details.
