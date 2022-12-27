@@ -1,7 +1,6 @@
 {-# LANGUAGE CPP #-}
 #define __LOC__ ( __FILE__ <> ":" <> show( __LINE__ :: Int ) )
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE NoMonomorphismRestriction #-}
 module Main (main) where
 
 import Lib
